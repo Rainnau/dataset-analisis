@@ -23,14 +23,6 @@ def analyze_pokemon_stats(file_path):
     print("\n|\t\t\t\t\t        Max-Min Comparison        \t\t\t\t\t|")
     print(comparion_stats.to_markdown())
 
-
-    mean_total = descriptive_stats.loc['mean', 'Total_Stats']
-    median_total = descriptive_stats.loc['50%', 'Total_Stats']
-
-    print(f"\n|| Total Stats Distribution Summary")
-    print(f"|| -> Mean Total Stats: {mean_total}")
-    print(f"|| -> Median Total Stats: {median_total}\n")
-
 if __name__ == "__main__":
     file_path = "pokedataset.csv"
     analyze_pokemon_stats(file_path)
