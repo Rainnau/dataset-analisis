@@ -14,7 +14,7 @@ def analyze_pokemon_stats(file_path):
 
     max_index = dataframe['Total_Stats'].idxmax()
     min_index = dataframe['Total_Stats'].idxmin()
-    mid_index = (dataframe['HP'] - dataframe['HP'].median()).abs().idxmin()
+    mid_index = (dataframe['Total_Stats'] - dataframe['Total_Stats'].median()).abs().idxmin()
 
     comparison_columns = ['Name'] + stats_columns
     comparion_stats = dataframe.loc[[max_index, mid_index, min_index], comparison_columns]
